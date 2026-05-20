@@ -1,0 +1,13 @@
+# Claude Code config
+.claude/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Temp scripts
+_*.py
+
+# OS
+.DS_Store
+Thumbs.db

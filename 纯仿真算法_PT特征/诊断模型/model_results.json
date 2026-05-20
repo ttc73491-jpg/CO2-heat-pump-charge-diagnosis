@@ -1,0 +1,124 @@
+{
+  "feature_set": "P/T parameters only",
+  "features": [
+    "T_amb_set",
+    "mode",
+    "P_suc[bar]",
+    "T_suc[degC]",
+    "P_dis[bar]",
+    "T_dis[degC]",
+    "P_gc_mid[bar]",
+    "T_gc_mid[degC]",
+    "P_gc_out[bar]",
+    "T_gc_out[degC]",
+    "P_eva_in[bar]",
+    "T_eva_in[degC]",
+    "P_eva_out[bar]",
+    "T_eva_out[degC]",
+    "T_amb[degC]"
+  ],
+  "train_size": 125,
+  "test_size": 32,
+  "best_classifier": "DNN",
+  "best_regressor": "DNN",
+  "classification": {
+    "RF": {
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 1,
+        "min_samples_split": 2,
+        "n_estimators": 100
+      },
+      "accuracy": 0.9375,
+      "precision": 0.9166666666666666,
+      "recall": 1.0,
+      "f1": 0.9565217391304348,
+      "cv_mean": 0.961420750894435
+    },
+    "SVM": {
+      "best_params": {
+        "C": 10,
+        "gamma": "scale",
+        "kernel": "rbf"
+      },
+      "accuracy": 0.9375,
+      "precision": 0.9166666666666666,
+      "recall": 1.0,
+      "f1": 0.9565217391304348,
+      "cv_mean": 0.9623604465709729
+    },
+    "DNN": {
+      "best_params": "hidden=(35, 97),act=tanh,alpha=0.002973,lr=0.006107",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "cv_mean": 0.9780076727445148
+    }
+  },
+  "classification_cm": {
+    "RF": [
+      [
+        8,
+        2
+      ],
+      [
+        0,
+        22
+      ]
+    ],
+    "SVM": [
+      [
+        8,
+        2
+      ],
+      [
+        0,
+        22
+      ]
+    ],
+    "DNN": [
+      [
+        10,
+        0
+      ],
+      [
+        0,
+        22
+      ]
+    ]
+  },
+  "regression": {
+    "RF": {
+      "best_params": {
+        "max_depth": 15,
+        "min_samples_leaf": 1,
+        "min_samples_split": 2,
+        "n_estimators": 200
+      },
+      "MAE": 16.077024838627047,
+      "RMSE": 28.79654613663149,
+      "R2": 0.8905256442179008,
+      "cv_MAE": 22.526424032311773
+    },
+    "SVR": {
+      "best_params": {
+        "C": 100,
+        "epsilon": 0.01,
+        "gamma": "auto",
+        "kernel": "rbf"
+      },
+      "MAE": 21.959281793969232,
+      "RMSE": 36.27942632894444,
+      "R2": 0.8262389559366158,
+      "cv_MAE": 19.192365866658736
+    },
+    "DNN": {
+      "best_params": "hidden=(98, 111, 71),act=relu,alpha=0.000069,lr=0.001851",
+      "MAE": 8.000759369901534,
+      "RMSE": 14.01736583993061,
+      "R2": 0.9740603321067857,
+      "cv_MAE": 11.765853543884258
+    }
+  }
+}

@@ -1,0 +1,12 @@
+COP
+h_gc_mid[kJ/kg]
+h_eva_in[kJ/kg]
+P_suc[bar]
+P_gc_mid[bar]
+W_comp[kW]
+h_gc_out[kJ/kg]
+Q_s1[kW]
+P_gc_out[bar]
+T_suc[degC]
+P_dis[bar]
+m_dot[kg/s]
