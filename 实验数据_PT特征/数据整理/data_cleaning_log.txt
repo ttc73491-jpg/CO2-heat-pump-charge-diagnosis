@@ -1,0 +1,29 @@
+实验数据清洗日志
+============================================================
+数据来源: 实验数据/充注量实验/充注量数据处理.xlsx
+Sheet 5&6: 30℃和35℃全回热P/T参数 (cols 0-18)
+Sheet 4: COP数据用于标签定义
+总样本数: 14
+适充(label=1): 11 样本
+欠充(label=0): 3 样本
+
+标签方法: COP饱和法 — COP >= 95%*COP_max → 适充
+  30℃: COP_max=1.940 at 800.0g, 适充=6, 欠充=1
+  35℃: COP_max=1.720 at 500.0g, 适充=5, 欠充=2
+
+特征列 (P/T直接测量参数, 排除压降):
+  T_amb
+  P_suc
+  P_dis
+  P_gc_in
+  P_gc_out
+  P_valve_in
+  P_eva_in
+  P_eva_out
+  T_suc
+  T_dis
+  T_gc_out
+  T_eva_in
+  T_eva_out
+
+输出文件: experimental_data_clean.csv

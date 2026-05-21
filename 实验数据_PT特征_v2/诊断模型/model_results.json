@@ -1,0 +1,98 @@
+{
+  "classification": {
+    "RandomForest": {
+      "best_params": {
+        "class_weight": null,
+        "max_depth": 3,
+        "min_samples_leaf": 1,
+        "n_estimators": 100
+      },
+      "accuracy": 0.9185,
+      "accuracy_std": 0.0277,
+      "f1": 0.9557,
+      "f1_std": 0.0146,
+      "precision": 0.9156,
+      "recall": 1.0
+    },
+    "SVM": {
+      "best_params": {
+        "C": 0.1,
+        "class_weight": "balanced",
+        "gamma": "auto",
+        "kernel": "rbf"
+      },
+      "accuracy": 0.963,
+      "accuracy_std": 0.0331,
+      "f1": 0.9776,
+      "f1_std": 0.0203,
+      "precision": 1.0,
+      "recall": 0.9569
+    },
+    "MLP": {
+      "best_params": {
+        "n_layers": 1,
+        "n_units_l0": 25,
+        "alpha": 1.2597499591516534e-05,
+        "lr": 0.022731218757320447,
+        "batch_size": 64
+      },
+      "accuracy": 0.9407,
+      "accuracy_std": 0.0296,
+      "f1": 0.9673,
+      "f1_std": 0.0164,
+      "precision": 0.9372,
+      "recall": 1.0
+    }
+  },
+  "regression": {
+    "RandomForest": {
+      "best_params": {
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "n_estimators": 300
+      },
+      "MAE": 77.36,
+      "MAE_std": 7.39,
+      "RMSE": 94.75,
+      "RMSE_std": 10.46,
+      "R2": 0.6644,
+      "R2_std": 0.057
+    },
+    "SVR": {
+      "best_params": {
+        "C": 100,
+        "epsilon": 0.1,
+        "gamma": "auto"
+      },
+      "MAE": 89.83,
+      "MAE_std": 10.15,
+      "RMSE": 108.68,
+      "RMSE_std": 10.65,
+      "R2": 0.5572,
+      "R2_std": 0.082
+    },
+    "MLP": {
+      "best_params": {
+        "n_layers": 1,
+        "n_units_l0": 93,
+        "alpha": 0.001433236344745505,
+        "lr": 0.013278843150504753,
+        "batch_size": 32
+      },
+      "MAE": 72.96,
+      "MAE_std": 7.21,
+      "RMSE": 96.79,
+      "RMSE_std": 9.64,
+      "R2": 0.6444,
+      "R2_std": 0.0917
+    }
+  },
+  "best_classifier": "SVM",
+  "best_regressor": "MLP",
+  "n_samples": 135,
+  "n_features": 14,
+  "label_distribution": {
+    "adequate": 118,
+    "undercharged": 17
+  }
+}

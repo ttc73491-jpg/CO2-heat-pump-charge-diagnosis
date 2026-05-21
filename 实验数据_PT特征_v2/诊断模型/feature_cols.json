@@ -1,0 +1,37 @@
+{
+  "pt_features": [
+    "T_suc",
+    "T_dis",
+    "T_gc_out",
+    "T_eva_in",
+    "T_eva_out",
+    "P_suc",
+    "P_dis",
+    "P_gc_in",
+    "P_gc_out",
+    "P_valve_in",
+    "P_eva_in",
+    "P_eva_out"
+  ],
+  "meta_features": [
+    "T_amb",
+    "compressor_speed"
+  ],
+  "all_features": [
+    "T_suc",
+    "T_dis",
+    "T_gc_out",
+    "T_eva_in",
+    "T_eva_out",
+    "P_suc",
+    "P_dis",
+    "P_gc_in",
+    "P_gc_out",
+    "P_valve_in",
+    "P_eva_in",
+    "P_eva_out",
+    "T_amb",
+    "compressor_speed"
+  ],
+  "n_features": 14
+}

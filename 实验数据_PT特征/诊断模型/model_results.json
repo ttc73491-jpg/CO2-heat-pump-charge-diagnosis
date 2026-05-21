@@ -1,0 +1,117 @@
+{
+  "feature_set": "Experimental P/T parameters (cooling: 30C, 35C, full recuperation)",
+  "features": [
+    "T_amb",
+    "P_suc",
+    "P_dis",
+    "P_gc_in",
+    "P_gc_out",
+    "P_valve_in",
+    "P_eva_in",
+    "P_eva_out",
+    "T_suc",
+    "T_dis",
+    "T_gc_out",
+    "T_eva_in",
+    "T_eva_out"
+  ],
+  "n_samples": 14,
+  "n_adequate": 11,
+  "n_undercharge": 3,
+  "eval_method": "LOOCV",
+  "note": "Extremely small sample size (n=14). Results indicative, not conclusive.",
+  "classification": {
+    "RF": {
+      "best_params": {
+        "max_depth": 3,
+        "min_samples_leaf": 1,
+        "min_samples_split": 2,
+        "n_estimators": 50
+      },
+      "accuracy": 0.7857142857142857,
+      "precision": 0.7857142857142857,
+      "recall": 1.0,
+      "f1": 0.88
+    },
+    "SVM": {
+      "best_params": {
+        "C": 1,
+        "gamma": "scale",
+        "kernel": "linear"
+      },
+      "accuracy": 0.8571428571428571,
+      "precision": 0.8461538461538461,
+      "recall": 1.0,
+      "f1": 0.9166666666666666
+    },
+    "DNN": {
+      "best_params": "hidden=(62, 57),act=tanh,alpha=0.000021,lr=0.020700",
+      "accuracy": 0.7857142857142857,
+      "precision": 0.8333333333333334,
+      "recall": 0.9090909090909091,
+      "f1": 0.8695652173913043
+    }
+  },
+  "classification_cm": {
+    "RF": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        11
+      ]
+    ],
+    "SVM": [
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        11
+      ]
+    ],
+    "DNN": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        10
+      ]
+    ]
+  },
+  "regression": {
+    "RF": {
+      "best_params": {
+        "max_depth": 5,
+        "min_samples_leaf": 1,
+        "min_samples_split": 2,
+        "n_estimators": 200
+      },
+      "MAE": 123.71428571428571,
+      "RMSE": 136.73188049192163,
+      "R2": 0.5326098214285715
+    },
+    "SVR": {
+      "best_params": {
+        "C": 100,
+        "epsilon": 0.5,
+        "gamma": "scale",
+        "kernel": "linear"
+      },
+      "MAE": 42.02043586084829,
+      "RMSE": 54.70933208585484,
+      "R2": 0.9251722245679914
+    },
+    "DNN": {
+      "best_params": "hidden=(41, 48, 41),act=relu,alpha=0.037826,lr=0.002314",
+      "MAE": 205.1872776033252,
+      "RMSE": 367.2283815250377,
+      "R2": -2.371417104937467
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "sobol_ST_order": [
+    "T_eva_out",
+    "T_dis",
+    "T_suc",
+    "compressor_speed",
+    "T_gc_out",
+    "P_eva_in",
+    "P_gc_in",
+    "P_dis",
+    "T_eva_in",
+    "P_eva_out",
+    "P_valve_in",
+    "P_gc_out",
+    "P_suc",
+    "T_amb"
+  ],
+  "top_half": [
+    "T_eva_out",
+    "T_dis",
+    "T_suc",
+    "compressor_speed",
+    "T_gc_out",
+    "P_eva_in",
+    "P_gc_in"
+  ],
+  "all_features": [
+    "T_suc",
+    "T_dis",
+    "T_gc_out",
+    "T_eva_in",
+    "T_eva_out",
+    "P_suc",
+    "P_dis",
+    "P_gc_in",
+    "P_gc_out",
+    "P_valve_in",
+    "P_eva_in",
+    "P_eva_out",
+    "T_amb",
+    "compressor_speed"
+  ]
+}
